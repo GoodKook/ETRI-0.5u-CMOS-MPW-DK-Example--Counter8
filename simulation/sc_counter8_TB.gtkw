@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Fri May 31 11:26:16 2024
+[*]
+[dumpfile] "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/simulation/sc_counter8_TB.vcd"
+[dumpfile_mtime] "Fri May 31 11:25:24 2024"
+[dumpfile_size] 24137
+[savefile] "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/simulation/sc_counter8_TB.gtkw"
+[timestart] 0
+[size] 1378 600
+[pos] -1 -1
+*-19.216707 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 214
+[signals_width] 162
+[sst_expanded] 1
+[sst_vpaned_height] 152
+@28
+SystemC.CLK
+SystemC.nCLR_L
+SystemC.nCLR_H
+SystemC.nLOAD_L
+SystemC.nLOAD_H
+SystemC.ENP
+SystemC.ENT
+@22
+SystemC.Din[7:0]
+SystemC.Dout[7:0]
+@28
+SystemC.RCO
+[pattern_trace] 1
+[pattern_trace] 0
