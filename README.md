@@ -14,7 +14,7 @@ Verilog RTL -> Verilated and tested with SystemC Testbench
 ![Counter8_6](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/b2746de3-66b7-46cc-8f82-fdc608796b64)
 </br>
 ![Counter8_7](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/7cfb1937-ac39-4976-90bb-250a792eb6f0)
-</br>
+</br>16-bit counter?</br>
 ![Counter16_8](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/0ffcb2c5-7739-4e2a-93cd-a7870493bc11)
 </br>
 ![Counter16_9](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/61adaa19-6ac9-4e26-b07c-dd1c01d997bc)
