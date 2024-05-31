@@ -2,8 +2,8 @@ Binary up-counter using cascade multiple 74163 (std logic device)
 
 Test environment
 Verilog RTL -> Verilated and tested with SystemC Testbench
-![Counter8_3](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/a6b7eefd-b4be-4788-825e-9f549308f299)
-![Counter8_2](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/bbb77907-e107-44e7-acd1-5299bf051735)
-![Counter8_1](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/92bc5f12-b0ad-4bb0-b633-d6d457aea137)
-![74163_2](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/c7473371-2e23-4f6d-adaf-e1769e2bd3ba)
-![74163_1](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/7996fe8a-976f-411d-8095-53e2ba5e88b8)
+![Counter8_3](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/36c6593c-42db-4f61-a6b7-8f3465733e52)
+![Counter8_2](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/d1950a69-9f6e-4907-80d0-aedcf77fa6b6)
+![Counter8_1](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/98f1ea94-85f0-4df7-b47d-ff126b76f43c)
+![74163_2](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/5ff22d2a-f31d-461a-a4e5-377dbf6b9f92)
+![74163_1](https://github.com/GoodKook/ETRI-0.5u-CMOS-MPW-DK-Example--Counter8/assets/162967523/6296462e-fe15-4dea-8683-99cc7509088c)
