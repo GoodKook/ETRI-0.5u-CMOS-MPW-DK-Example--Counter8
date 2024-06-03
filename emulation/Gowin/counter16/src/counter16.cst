@@ -1,0 +1,58 @@
+//File Title: Physical Constraints file
+//Tool Version: V1.9.9.03
+//Part Number: GW5A-LV25MG121NC2/I1
+//Device: GW5A-25
+
+IO_LOC "Din[3]"         G5;     // J6-12
+IO_LOC "Din[2]"         F5;     // J6-11
+IO_LOC "Din[1]"         G8;     // J6-10
+IO_LOC "Din[0]"         G7;     // J6-9
+IO_LOC "RCO"            H7;     // J6-8
+IO_LOC "nLOAD"          H8;     // J6-7
+IO_LOC "nCLR"           J5;     // J6-6, GCLK
+IO_LOC "CLK"            H5;     // J6-5, GCLK
+
+IO_LOC "Dout[15]"       A10;    // J5-12
+IO_LOC "Dout[14]"       A11;    // J5-11
+IO_LOC "Dout[13]"       E10;    // J5-10
+IO_LOC "Dout[12]"       E11;    // J5-9
+IO_LOC "Dout[11]"       L11;    // J5-8
+IO_LOC "Dout[10]"       K11;    // J5-7
+IO_LOC "Dout[9]"        K5;     // J5-6
+IO_LOC "Dout[8]"        L5;     // J5-5
+
+IO_LOC "Dout[7]"        G10;    // J4-12
+IO_LOC "Dout[6]"        G11;    // J4-11
+IO_LOC "Dout[5]"        D10;    // J4-10
+IO_LOC "Dout[4]"        D11;    // J4-9
+IO_LOC "Dout[3]"        B10;    // J4-8
+IO_LOC "Dout[2]"        B11;    // J4-7
+IO_LOC "Dout[1]"        C10;    // J4-6
+IO_LOC "Dout[0]"        C11;    // J4-5
+
+IO_PORT "RCO"       IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "CLK"       IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "nLOAD"     IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "nCLR"      IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Din[3]"    IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Din[2]"    IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Din[1]"    IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Din[0]"    IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+
+IO_PORT "Dout[15]"  IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[14]"  IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[13]"  IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[12]"  IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[11]"  IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[10]"  IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[9]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[8]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[7]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[6]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[5]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[4]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[3]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[2]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[1]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_PORT "Dout[0]"   IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+

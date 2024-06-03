@@ -1,5 +1,6 @@
 //
-//
+// Emulation Interface to "Counter8"/Cycle Accurate
+// goodkook@gmail.com
 //
 
 #ifndef _COUNTER8_H_

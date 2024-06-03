@@ -1,0 +1,207 @@
+/*
+  counter16 with SystemC Co-Emulation
+*/
+
+inline void digitalWriteDirect(int pin, boolean val)
+{
+  if(val) g_APinDescription[pin].pPort -> PIO_SODR = g_APinDescription[pin].ulPin;
+  else    g_APinDescription[pin].pPort -> PIO_CODR = g_APinDescription[pin].ulPin;
+}
+
+inline int digitalReadDirect(int pin)
+{
+  return !!(g_APinDescription[pin].pPort -> PIO_PDSR & g_APinDescription[pin].ulPin);
+}
+
+#define SIPEED_TANG_25K_BOARD
+//#define ARTY_A7_100T_BOARD
+
+//---------------------------------------------
+// Pin-Map for Arty A7-100T (Xilinx)
+#ifdef ARTY_A7_100T_BOARD
+#endif
+
+//---------------------------------------------
+// Pin-Map for PiSPEED's TANG-25K Board (GOWIN)
+#ifdef SIPEED_TANG_25K_BOARD
+#define PIN_Din_3   37  // J6-12|JC-7
+#define PIN_Din_2   36  // J6-11|JC-1
+#define PIN_Din_1   35  // J6-10|JC-8
+#define PIN_Din_0   34  // J6-9 |JC-2
+#define PIN_RCO     33  // J6-8 |JC-9
+#define PIN_nLOAD   32  // J6-7 |JC-3
+#define PIN_nCLR    31  // J6-6 |JC-10
+#define PIN_CLK     30  // J6-5 |JC-4
+
+#define PIN_Dout_15 45  // J5-12|JB-7
+#define PIN_Dout_14 44  // J5-11|JB-1
+#define PIN_Dout_13 43  // J5-10|JB-8
+#define PIN_Dout_12 42  // J5-9 |JB-2
+#define PIN_Dout_11 41  // J5-8 |JB-9
+#define PIN_Dout_10 40  // J5-7 |JB-3
+#define PIN_Dout_9  39  // J5-6 |JB-10
+#define PIN_Dout_8  38  // J5-5 |JB-4
+
+#define PIN_Dout_7  53  // J4-12|JA-7
+#define PIN_Dout_6  52  // J4-11|JA-1
+#define PIN_Dout_5  51  // J4-10|JA-8
+#define PIN_Dout_4  50  // J4-9 |JA-2
+#define PIN_Dout_3  49  // J4-8 |JA-9
+#define PIN_Dout_2  48  // J4-7 |JA-3
+#define PIN_Dout_1  47  // J4-6 |JA-10
+#define PIN_Dout_0  46  // J4-5 |JA-4
+#endif  // SIPEED_TANG_25K_BOARD
+
+//--------------------------------------------------------------------
+void establishContact()
+{
+  while (Serial.available() <= 0)
+  {
+    Serial.print('A');  // send a capital A
+    delay(300);
+    if (Serial.read()==(int)'A')
+      break;
+  }
+}
+//------------------------------------------------------------------------------
+void setup()
+{
+  // start serial port at 9600 bps:
+  Serial.begin(9600);
+  while (!Serial)
+  {
+    ;  // wait for serial port to connect. Needed for native USB port only
+  }
+  establishContact();  // send a byte to establish contact until receiver responds
+
+  // Set digital pins to output connecting DUT's INPUT
+  pinMode(PIN_CLK     , OUTPUT);  digitalWriteDirect(PIN_CLK     , LOW);
+  pinMode(PIN_nCLR    , OUTPUT);  digitalWriteDirect(PIN_nCLR    , LOW);
+  pinMode(PIN_nLOAD   , OUTPUT);  digitalWriteDirect(PIN_nLOAD   , LOW);
+  pinMode(PIN_Din_0   , OUTPUT);  digitalWriteDirect(PIN_Din_0   , LOW);
+  pinMode(PIN_Din_1   , OUTPUT);  digitalWriteDirect(PIN_Din_1   , LOW);
+  pinMode(PIN_Din_2   , OUTPUT);  digitalWriteDirect(PIN_Din_2   , LOW);
+  pinMode(PIN_Din_3   , OUTPUT);  digitalWriteDirect(PIN_Din_3   , LOW);
+
+  // Set digital pins to input connecting DUT's OUTPUT
+  pinMode(PIN_Dout_0  , INPUT);
+  pinMode(PIN_Dout_1  , INPUT);
+  pinMode(PIN_Dout_2  , INPUT);
+  pinMode(PIN_Dout_3  , INPUT);
+  pinMode(PIN_Dout_4  , INPUT);
+  pinMode(PIN_Dout_5  , INPUT);
+  pinMode(PIN_Dout_6  , INPUT);
+  pinMode(PIN_Dout_7  , INPUT);
+  pinMode(PIN_Dout_8  , INPUT);
+  pinMode(PIN_Dout_9  , INPUT);
+  pinMode(PIN_Dout_10 , INPUT);
+  pinMode(PIN_Dout_11 , INPUT);
+  pinMode(PIN_Dout_12 , INPUT);
+  pinMode(PIN_Dout_13 , INPUT);
+  pinMode(PIN_Dout_14 , INPUT);
+  pinMode(PIN_Dout_15 , INPUT);
+  pinMode(PIN_RCO     , INPUT);
+
+  // Monitoring LED
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWriteDirect(LED_BUILTIN, HIGH);
+}
+
+#define N_RX  1 // [0]={-|CLK|nCLR|nLOAD|Din_3|Din_2|Din_1|Din_0}
+#define N_TX  3 // [0]=Dout_7~0
+                // [1]=Dout_15~8
+                // [2]={-------|RCO}
+
+uint8_t rxBuf[N_RX], txBuf[N_TX];
+
+void RxPacket()
+{
+  int rxByte;
+
+  while(true)
+  {
+    if (Serial.available() >= N_RX)
+    {
+      for(int i=0; i<N_RX; i++)
+      {
+        rxByte = Serial.read();
+        rxBuf[i] = (uint8_t)rxByte;
+      }
+      //rxBuf[0]={-|CLK|nCLR|nLOAD|Din_3|Din_2|Din_1|Din_0}
+      digitalWriteDirect(PIN_nCLR,  rxBuf[0] & 0x20);
+      digitalWriteDirect(PIN_nLOAD, rxBuf[0] & 0x10);
+      digitalWriteDirect(PIN_Din_3, rxBuf[0] & 0x08);
+      digitalWriteDirect(PIN_Din_2, rxBuf[0] & 0x04);
+      digitalWriteDirect(PIN_Din_1, rxBuf[0] & 0x02);
+      digitalWriteDirect(PIN_Din_0, rxBuf[0] & 0x01);
+      // Clocking to DUT
+      //if (rxBuf[0] & 0x40)
+      //{
+      //  digitalWrite(PIN_CLK, HIGH);
+      //  delayMicroseconds(1);
+      //}
+      //else
+      //{
+      //  digitalWrite(PIN_CLK, LOW);
+      //  delayMicroseconds(1);
+      //}
+      
+      return;
+    }
+  }
+}
+
+void TxPacket()
+{
+  int txByte;
+
+  while(1)
+  {
+    if (Serial.availableForWrite() >= N_TX)
+    {
+      txBuf[0] = ((digitalReadDirect(PIN_Dout_0)?  0x01:0x00) |
+                  (digitalReadDirect(PIN_Dout_1)?  0x02:0x00) |
+                  (digitalReadDirect(PIN_Dout_2)?  0x04:0x00) |
+                  (digitalReadDirect(PIN_Dout_3)?  0x08:0x00) |
+                  (digitalReadDirect(PIN_Dout_4)?  0x10:0x00) |
+                  (digitalReadDirect(PIN_Dout_5)?  0x20:0x00) |
+                  (digitalReadDirect(PIN_Dout_6)?  0x40:0x00) |
+                  (digitalReadDirect(PIN_Dout_7)?  0x80:0x00));  // Dout_7~0
+      txBuf[1] = ((digitalReadDirect(PIN_Dout_8)?  0x01:0x00) |
+                  (digitalReadDirect(PIN_Dout_9)?  0x02:0x00) |
+                  (digitalReadDirect(PIN_Dout_10)? 0x04:0x00) |
+                  (digitalReadDirect(PIN_Dout_11)? 0x08:0x00) |
+                  (digitalReadDirect(PIN_Dout_12)? 0x10:0x00) |
+                  (digitalReadDirect(PIN_Dout_13)? 0x20:0x00) |
+                  (digitalReadDirect(PIN_Dout_14)? 0x40:0x00) |
+                  (digitalReadDirect(PIN_Dout_15)? 0x80:0x00));  // Dout_15~8
+      txBuf[2] = ((digitalReadDirect(PIN_RCO)? 0x01:0x00)); // RCO
+
+      for(int i=0; i<N_TX; i++)
+      {
+        txByte = (int)txBuf[i];
+        Serial.write(txByte);
+      }
+
+      return;
+    }
+  }
+}
+
+uint8_t counter;
+
+void loop()
+{
+  counter += 1;
+  digitalWriteDirect(LED_BUILTIN, (counter & 0x10)? HIGH:LOW);
+
+  RxPacket();
+  delayMicroseconds(10);
+  digitalWriteDirect(PIN_CLK, HIGH);
+  delayMicroseconds(10);
+
+  TxPacket();
+  delayMicroseconds(10);
+  digitalWriteDirect(PIN_CLK, LOW);
+  delayMicroseconds(10);
+}

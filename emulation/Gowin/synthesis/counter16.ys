@@ -1,0 +1,9 @@
+### Yosys taargetting GoWin
+read_verilog ../../counter16_wrapper.v
+read_verilog ../../../source/counter16.v
+read_verilog ../../../source/LS163.v
+
+hierarchy -check -top counter16_wrapper
+
+synth_gowin -top counter16_wrapper -noalu -vout counter16_wrapper.v
+stat

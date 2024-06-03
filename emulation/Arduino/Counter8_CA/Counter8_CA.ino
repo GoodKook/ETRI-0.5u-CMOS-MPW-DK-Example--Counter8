@@ -1,5 +1,6 @@
 /*
   counter8 with SystemC Co-Emulation
+  Cycle Accurate Level
 */
 
 #define PIN_CLK     22

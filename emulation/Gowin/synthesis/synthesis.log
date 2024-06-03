@@ -1,0 +1,1789 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.41+111 (git sha1 4b67f3757, clang++ 10.0.0-4ubuntu1 -fPIC -Os)
+
+-- Executing script file `counter16.ys' --
+
+1. Executing Verilog-2005 frontend: ../../counter16_wrapper.v
+Parsing Verilog input from `../../counter16_wrapper.v' to AST representation.
+Generating RTLIL representation for module `\counter16_wrapper'.
+Warning: Replacing memory \vectOut with list of registers. See ../../counter16_wrapper.v:61, ../../counter16_wrapper.v:55, ../../counter16_wrapper.v:53
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: ../../../source/counter16.v
+Parsing Verilog input from `../../../source/counter16.v' to AST representation.
+Generating RTLIL representation for module `\counter16'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: ../../../source/LS163.v
+Parsing Verilog input from `../../../source/LS163.v' to AST representation.
+Generating RTLIL representation for module `\LS163'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \counter16_wrapper
+Used module:     \counter16
+Used module:         \LS163
+
+4.2. Analyzing design hierarchy..
+Top module:  \counter16_wrapper
+Used module:     \counter16
+Used module:         \LS163
+Removed 0 unused modules.
+
+5. Executing SYNTH_GOWIN pass.
+
+5.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_sim.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\__APICULA_LUT5'.
+Generating RTLIL representation for module `\__APICULA_LUT6'.
+Generating RTLIL representation for module `\__APICULA_LUT7'.
+Generating RTLIL representation for module `\__APICULA_LUT8'.
+Generating RTLIL representation for module `\MUX2'.
+Generating RTLIL representation for module `\MUX2_LUT5'.
+Generating RTLIL representation for module `\MUX2_LUT6'.
+Generating RTLIL representation for module `\MUX2_LUT7'.
+Generating RTLIL representation for module `\MUX2_LUT8'.
+Generating RTLIL representation for module `\DFF'.
+Generating RTLIL representation for module `\DFFE'.
+Generating RTLIL representation for module `\DFFS'.
+Generating RTLIL representation for module `\DFFSE'.
+Generating RTLIL representation for module `\DFFR'.
+Generating RTLIL representation for module `\DFFRE'.
+Generating RTLIL representation for module `\DFFP'.
+Generating RTLIL representation for module `\DFFPE'.
+Generating RTLIL representation for module `\DFFC'.
+Generating RTLIL representation for module `\DFFCE'.
+Generating RTLIL representation for module `\DFFN'.
+Generating RTLIL representation for module `\DFFNE'.
+Generating RTLIL representation for module `\DFFNS'.
+Generating RTLIL representation for module `\DFFNSE'.
+Generating RTLIL representation for module `\DFFNR'.
+Generating RTLIL representation for module `\DFFNRE'.
+Generating RTLIL representation for module `\DFFNP'.
+Generating RTLIL representation for module `\DFFNPE'.
+Generating RTLIL representation for module `\DFFNC'.
+Generating RTLIL representation for module `\DFFNCE'.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\IBUF'.
+Generating RTLIL representation for module `\OBUF'.
+Generating RTLIL representation for module `\TBUF'.
+Generating RTLIL representation for module `\IOBUF'.
+Generating RTLIL representation for module `\ELVDS_OBUF'.
+Generating RTLIL representation for module `\TLVDS_OBUF'.
+Generating RTLIL representation for module `\OSER4'.
+Generating RTLIL representation for module `\OSER8'.
+Generating RTLIL representation for module `\OSER10'.
+Generating RTLIL representation for module `\OVIDEO'.
+Generating RTLIL representation for module `\OSER16'.
+Generating RTLIL representation for module `\IDES4'.
+Generating RTLIL representation for module `\IDES8'.
+Generating RTLIL representation for module `\IDES10'.
+Generating RTLIL representation for module `\IVIDEO'.
+Generating RTLIL representation for module `\IDES16'.
+Generating RTLIL representation for module `\IDDR'.
+Generating RTLIL representation for module `\IDDRC'.
+Generating RTLIL representation for module `\ODDR'.
+Generating RTLIL representation for module `\ODDRC'.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\ALU'.
+Generating RTLIL representation for module `\RAM16S1'.
+Generating RTLIL representation for module `\RAM16S2'.
+Generating RTLIL representation for module `\RAM16S4'.
+Generating RTLIL representation for module `\RAM16SDP1'.
+Generating RTLIL representation for module `\RAM16SDP2'.
+Generating RTLIL representation for module `\RAM16SDP4'.
+Generating RTLIL representation for module `\SP'.
+Generating RTLIL representation for module `\SPX9'.
+Generating RTLIL representation for module `\SDP'.
+Generating RTLIL representation for module `\SDPX9'.
+Generating RTLIL representation for module `\DP'.
+Generating RTLIL representation for module `\DPX9'.
+Generating RTLIL representation for module `\rPLL'.
+Generating RTLIL representation for module `\PLLVR'.
+Generating RTLIL representation for module `\OSC'.
+Generating RTLIL representation for module `\OSCZ'.
+Generating RTLIL representation for module `\OSCF'.
+Generating RTLIL representation for module `\OSCH'.
+Generating RTLIL representation for module `\OSCW'.
+Generating RTLIL representation for module `\OSCO'.
+Successfully finished Verilog frontend.
+
+5.2. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_xtra.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_xtra.v' to AST representation.
+Generating RTLIL representation for module `\MUX2_MUX8'.
+Generating RTLIL representation for module `\MUX2_MUX16'.
+Generating RTLIL representation for module `\MUX2_MUX32'.
+Generating RTLIL representation for module `\MUX4'.
+Generating RTLIL representation for module `\MUX8'.
+Generating RTLIL representation for module `\MUX16'.
+Generating RTLIL representation for module `\MUX32'.
+Generating RTLIL representation for module `\LUT5'.
+Generating RTLIL representation for module `\LUT6'.
+Generating RTLIL representation for module `\LUT7'.
+Generating RTLIL representation for module `\LUT8'.
+Generating RTLIL representation for module `\DL'.
+Generating RTLIL representation for module `\DLE'.
+Generating RTLIL representation for module `\DLC'.
+Generating RTLIL representation for module `\DLCE'.
+Generating RTLIL representation for module `\DLP'.
+Generating RTLIL representation for module `\DLPE'.
+Generating RTLIL representation for module `\DLN'.
+Generating RTLIL representation for module `\DLNE'.
+Generating RTLIL representation for module `\DLNC'.
+Generating RTLIL representation for module `\DLNCE'.
+Generating RTLIL representation for module `\DLNP'.
+Generating RTLIL representation for module `\DLNPE'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\IODELAY'.
+Generating RTLIL representation for module `\IEM'.
+Generating RTLIL representation for module `\ROM16'.
+Generating RTLIL representation for module `\ROM'.
+Generating RTLIL representation for module `\ROMX9'.
+Generating RTLIL representation for module `\rSDP'.
+Generating RTLIL representation for module `\rSDPX9'.
+Generating RTLIL representation for module `\rROM'.
+Generating RTLIL representation for module `\rROMX9'.
+Generating RTLIL representation for module `\pROM'.
+Generating RTLIL representation for module `\pROMX9'.
+Generating RTLIL representation for module `\SDPB'.
+Generating RTLIL representation for module `\SDPX9B'.
+Generating RTLIL representation for module `\DPB'.
+Generating RTLIL representation for module `\DPX9B'.
+Generating RTLIL representation for module `\PADD18'.
+Generating RTLIL representation for module `\PADD9'.
+Generating RTLIL representation for module `\MULT9X9'.
+Generating RTLIL representation for module `\MULT18X18'.
+Generating RTLIL representation for module `\MULT36X36'.
+Generating RTLIL representation for module `\MULTALU36X18'.
+Generating RTLIL representation for module `\MULTADDALU18X18'.
+Generating RTLIL representation for module `\MULTALU18X18'.
+Generating RTLIL representation for module `\ALU54D'.
+Generating RTLIL representation for module `\BUFG'.
+Generating RTLIL representation for module `\BUFS'.
+Generating RTLIL representation for module `\PLL'.
+Generating RTLIL representation for module `\TLVDS_IBUF'.
+Generating RTLIL representation for module `\TLVDS_TBUF'.
+Generating RTLIL representation for module `\TLVDS_IOBUF'.
+Generating RTLIL representation for module `\ELVDS_IBUF'.
+Generating RTLIL representation for module `\ELVDS_TBUF'.
+Generating RTLIL representation for module `\ELVDS_IOBUF'.
+Generating RTLIL representation for module `\MIPI_IBUF'.
+Generating RTLIL representation for module `\MIPI_IBUF_HS'.
+Generating RTLIL representation for module `\MIPI_IBUF_LP'.
+Generating RTLIL representation for module `\MIPI_OBUF'.
+Generating RTLIL representation for module `\MIPI_OBUF_A'.
+Generating RTLIL representation for module `\I3C_IOBUF'.
+Generating RTLIL representation for module `\CLKDIV'.
+Generating RTLIL representation for module `\DHCEN'.
+Generating RTLIL representation for module `\DLL'.
+Generating RTLIL representation for module `\DLLDLY'.
+Generating RTLIL representation for module `\FLASH96K'.
+Generating RTLIL representation for module `\FLASH256K'.
+Generating RTLIL representation for module `\FLASH608K'.
+Generating RTLIL representation for module `\DCS'.
+Generating RTLIL representation for module `\DQCE'.
+Generating RTLIL representation for module `\FLASH128K'.
+Generating RTLIL representation for module `\MCU'.
+Generating RTLIL representation for module `\USB20_PHY'.
+Generating RTLIL representation for module `\ADC'.
+Generating RTLIL representation for module `\BANDGAP'.
+Generating RTLIL representation for module `\CLKDIV2'.
+Generating RTLIL representation for module `\DCC'.
+Generating RTLIL representation for module `\DHCENC'.
+Generating RTLIL representation for module `\EMCU'.
+Generating RTLIL representation for module `\FLASH64K'.
+Generating RTLIL representation for module `\FLASH64KZ'.
+Generating RTLIL representation for module `\I3C'.
+Generating RTLIL representation for module `\IODELAYA'.
+Generating RTLIL representation for module `\IODELAYC'.
+Generating RTLIL representation for module `\SPMI'.
+Generating RTLIL representation for module `\IODELAYB'.
+Generating RTLIL representation for module `\PLLO'.
+Generating RTLIL representation for module `\DCCG'.
+Generating RTLIL representation for module `\FLASH96KA'.
+Generating RTLIL representation for module `\MIPI_DPHY_RX'.
+Generating RTLIL representation for module `\CLKDIVG'.
+Successfully finished Verilog frontend.
+
+5.3. Executing HIERARCHY pass (managing design hierarchy).
+
+5.3.1. Analyzing design hierarchy..
+Top module:  \counter16_wrapper
+Used module:     \counter16
+Used module:         \LS163
+
+5.3.2. Analyzing design hierarchy..
+Top module:  \counter16_wrapper
+Used module:     \counter16
+Used module:         \LS163
+Removed 0 unused modules.
+
+5.4. Executing PROC pass (convert processes to netlists).
+
+5.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$266'.
+Cleaned up 1 empty switch.
+
+5.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326 in module RAM16S4.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290 in module RAM16S2.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$271 in module RAM16S1.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$262 in module DFFNCE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$260 in module DFFNC.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$258 in module DFFNPE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$256 in module DFFNP.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$254 in module DFFNRE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$252 in module DFFNR.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$250 in module DFFNSE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$248 in module DFFNS.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$242 in module DFFCE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$240 in module DFFC.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$238 in module DFFPE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$236 in module DFFP.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$234 in module DFFRE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$232 in module DFFR.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$230 in module DFFSE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$228 in module DFFS.
+Marked 2 switch rules as full_case in process $proc$../../../source/LS163.v:12$32 in module LS163.
+Marked 3 switch rules as full_case in process $proc$../../counter16_wrapper.v:43$6 in module counter16_wrapper.
+Removed a total of 0 dead cases.
+
+5.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 8 redundant assignments.
+Promoted 63 assignments to connections.
+
+5.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$371'.
+  Set init value: \mem0 = 16'0000000000000000
+  Set init value: \mem1 = 16'0000000000000000
+  Set init value: \mem2 = 16'0000000000000000
+  Set init value: \mem3 = 16'0000000000000000
+Found init rule in `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$313'.
+  Set init value: \mem0 = 16'0000000000000000
+  Set init value: \mem1 = 16'0000000000000000
+Found init rule in `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$283'.
+  Set init value: \mem = 16'0000000000000000
+Found init rule in `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$263'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$261'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$259'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$257'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$255'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$253'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$251'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$249'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$247'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$245'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$243'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$241'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$239'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$237'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$235'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$233'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$231'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+  Set init value: \Q = 1'0
+
+5.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \CLEAR in `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$262'.
+Found async reset \CLEAR in `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$260'.
+Found async reset \PRESET in `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$258'.
+Found async reset \PRESET in `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$256'.
+Found async reset \CLEAR in `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$242'.
+Found async reset \CLEAR in `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$240'.
+Found async reset \PRESET in `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$238'.
+Found async reset \PRESET in `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$236'.
+Found async reset \nCLR in `\LS163.$proc$../../../source/LS163.v:12$32'.
+
+5.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~26 debug messages>
+
+5.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$371'.
+Creating decoders for process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+     1/8: $1$lookahead\mem3$325[15:0]$342
+     2/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1075$317[3:0]$338
+     3/8: $1$lookahead\mem2$324[15:0]$341
+     4/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1074$316[3:0]$337
+     5/8: $1$lookahead\mem1$323[15:0]$340
+     6/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1073$315[3:0]$336
+     7/8: $1$lookahead\mem0$322[15:0]$339
+     8/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1072$314[3:0]$335
+Creating decoders for process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$313'.
+Creating decoders for process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+     1/4: $1$lookahead\mem1$289[15:0]$298
+     2/4: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1028$285[3:0]$296
+     3/4: $1$lookahead\mem0$288[15:0]$297
+     4/4: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1027$284[3:0]$295
+Creating decoders for process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$283'.
+Creating decoders for process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$271'.
+     1/2: $1$lookahead\mem$270[15:0]$275
+     2/2: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:989$268[3:0]$274
+Creating decoders for process `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$266'.
+Creating decoders for process `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$263'.
+Creating decoders for process `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$262'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$261'.
+Creating decoders for process `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$260'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$259'.
+Creating decoders for process `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$258'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$257'.
+Creating decoders for process `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$256'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$255'.
+Creating decoders for process `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$254'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$253'.
+Creating decoders for process `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$252'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$251'.
+Creating decoders for process `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$250'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$249'.
+Creating decoders for process `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$248'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$247'.
+Creating decoders for process `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$246'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$245'.
+Creating decoders for process `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:366$244'.
+Creating decoders for process `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$243'.
+Creating decoders for process `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$242'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$241'.
+Creating decoders for process `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$240'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$239'.
+Creating decoders for process `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$238'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$237'.
+Creating decoders for process `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$236'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$235'.
+Creating decoders for process `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$234'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$233'.
+Creating decoders for process `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$232'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$231'.
+Creating decoders for process `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$230'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+Creating decoders for process `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$228'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+Creating decoders for process `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$226'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+Creating decoders for process `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:179$224'.
+Creating decoders for process `\LS163.$proc$../../../source/LS163.v:12$32'.
+     1/1: $0\cnt[3:0]
+Creating decoders for process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+     1/23: $3$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_DATA[7:0]$31
+     2/23: $2\vectOut[2][7:0] [7:1]
+     3/23: $2\vectOut[2][7:0] [0]
+     4/23: $2$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$30
+     5/23: $2$memwr$\stimIn$../../counter16_wrapper.v:60$5_DATA[7:0]$29
+     6/23: $2$memwr$\stimIn$../../counter16_wrapper.v:60$5_ADDR[2:0]$28
+     7/23: $2$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_DATA[7:0]$27
+     8/23: $2$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_ADDR[1:0]$26
+     9/23: $1$mem2bits$\stimIn$../../counter16_wrapper.v:49$4[7:0]$19
+    10/23: $1$mem2bits$\stimIn$../../counter16_wrapper.v:48$3[7:0]$18
+    11/23: $1$mem2bits$\stimIn$../../counter16_wrapper.v:47$2[7:0]$17
+    12/23: $1$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$22
+    13/23: $1$memwr$\stimIn$../../counter16_wrapper.v:60$5_DATA[7:0]$21
+    14/23: $1$memwr$\stimIn$../../counter16_wrapper.v:60$5_ADDR[2:0]$20
+    15/23: $1$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_DATA[7:0]$16
+    16/23: $1$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_ADDR[1:0]$15
+    17/23: $1\vectOut[2][7:0]
+    18/23: $0\vectOut[1][7:0]
+    19/23: $0\vectOut[0][7:0]
+    20/23: $0\Din[3:0]
+    21/23: $0\nLOAD[0:0]
+    22/23: $0\nCLR[0:0]
+    23/23: $0\Dout_emu[7:0]
+
+5.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\RAM16S4.\mem0' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$577' with positive edge clock.
+Creating register for signal `\RAM16S4.\mem1' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$578' with positive edge clock.
+Creating register for signal `\RAM16S4.\mem2' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$579' with positive edge clock.
+Creating register for signal `\RAM16S4.\mem3' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$580' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1072$314' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$581' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1073$315' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$582' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1074$316' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$583' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1075$317' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$584' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem0$322' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$585' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem1$323' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$586' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem2$324' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$587' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem3$325' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+  created $dff cell `$procdff$588' with positive edge clock.
+Creating register for signal `\RAM16S2.\mem0' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+  created $dff cell `$procdff$589' with positive edge clock.
+Creating register for signal `\RAM16S2.\mem1' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+  created $dff cell `$procdff$590' with positive edge clock.
+Creating register for signal `\RAM16S2.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1027$284' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+  created $dff cell `$procdff$591' with positive edge clock.
+Creating register for signal `\RAM16S2.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1028$285' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+  created $dff cell `$procdff$592' with positive edge clock.
+Creating register for signal `\RAM16S2.$lookahead\mem0$288' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+  created $dff cell `$procdff$593' with positive edge clock.
+Creating register for signal `\RAM16S2.$lookahead\mem1$289' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+  created $dff cell `$procdff$594' with positive edge clock.
+Creating register for signal `\RAM16S1.\mem' using process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$271'.
+  created $dff cell `$procdff$595' with positive edge clock.
+Creating register for signal `\RAM16S1.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:989$268' using process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$271'.
+  created $dff cell `$procdff$596' with positive edge clock.
+Creating register for signal `\RAM16S1.$lookahead\mem$270' using process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$271'.
+  created $dff cell `$procdff$597' with positive edge clock.
+Creating register for signal `\ALU.\C' using process `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$266'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\ALU.\S' using process `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$266'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DFFNCE.\Q' using process `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$262'.
+  created $adff cell `$procdff$598' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNC.\Q' using process `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$260'.
+  created $adff cell `$procdff$599' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNPE.\Q' using process `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$258'.
+  created $adff cell `$procdff$600' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNP.\Q' using process `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$256'.
+  created $adff cell `$procdff$601' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNRE.\Q' using process `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$254'.
+  created $dff cell `$procdff$602' with negative edge clock.
+Creating register for signal `\DFFNR.\Q' using process `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$252'.
+  created $dff cell `$procdff$603' with negative edge clock.
+Creating register for signal `\DFFNSE.\Q' using process `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$250'.
+  created $dff cell `$procdff$604' with negative edge clock.
+Creating register for signal `\DFFNS.\Q' using process `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$248'.
+  created $dff cell `$procdff$605' with negative edge clock.
+Creating register for signal `\DFFNE.\Q' using process `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$246'.
+  created $dff cell `$procdff$606' with negative edge clock.
+Creating register for signal `\DFFN.\Q' using process `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:366$244'.
+  created $dff cell `$procdff$607' with negative edge clock.
+Creating register for signal `\DFFCE.\Q' using process `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$242'.
+  created $adff cell `$procdff$608' with positive edge clock and positive level reset.
+Creating register for signal `\DFFC.\Q' using process `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$240'.
+  created $adff cell `$procdff$609' with positive edge clock and positive level reset.
+Creating register for signal `\DFFPE.\Q' using process `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$238'.
+  created $adff cell `$procdff$610' with positive edge clock and positive level reset.
+Creating register for signal `\DFFP.\Q' using process `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$236'.
+  created $adff cell `$procdff$611' with positive edge clock and positive level reset.
+Creating register for signal `\DFFRE.\Q' using process `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$234'.
+  created $dff cell `$procdff$612' with positive edge clock.
+Creating register for signal `\DFFR.\Q' using process `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$232'.
+  created $dff cell `$procdff$613' with positive edge clock.
+Creating register for signal `\DFFSE.\Q' using process `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$230'.
+  created $dff cell `$procdff$614' with positive edge clock.
+Creating register for signal `\DFFS.\Q' using process `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$228'.
+  created $dff cell `$procdff$615' with positive edge clock.
+Creating register for signal `\DFFE.\Q' using process `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$226'.
+  created $dff cell `$procdff$616' with positive edge clock.
+Creating register for signal `\DFF.\Q' using process `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:179$224'.
+  created $dff cell `$procdff$617' with positive edge clock.
+Creating register for signal `\LS163.\cnt' using process `\LS163.$proc$../../../source/LS163.v:12$32'.
+  created $adff cell `$procdff$618' with positive edge clock and negative level reset.
+Creating register for signal `\counter16_wrapper.\Dout_emu' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$619' with positive edge clock.
+Creating register for signal `\counter16_wrapper.\nCLR' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$620' with positive edge clock.
+Creating register for signal `\counter16_wrapper.\nLOAD' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$621' with positive edge clock.
+Creating register for signal `\counter16_wrapper.\Din' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$622' with positive edge clock.
+Creating register for signal `\counter16_wrapper.\vectOut[0]' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$623' with positive edge clock.
+Creating register for signal `\counter16_wrapper.\vectOut[1]' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$624' with positive edge clock.
+Creating register for signal `\counter16_wrapper.\vectOut[2]' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$625' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_ADDR' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$626' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_DATA' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$627' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$mem2bits$\stimIn$../../counter16_wrapper.v:47$2' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$628' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$mem2bits$\stimIn$../../counter16_wrapper.v:48$3' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$629' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$mem2bits$\stimIn$../../counter16_wrapper.v:49$4' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$630' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$memwr$\stimIn$../../counter16_wrapper.v:60$5_ADDR' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$631' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$memwr$\stimIn$../../counter16_wrapper.v:60$5_DATA' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$632' with positive edge clock.
+Creating register for signal `\counter16_wrapper.$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN' using process `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+  created $dff cell `$procdff$633' with positive edge clock.
+
+5.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$371'.
+Found and cleaned up 1 empty switch in `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+Removing empty process `RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$326'.
+Removing empty process `RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$313'.
+Found and cleaned up 1 empty switch in `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+Removing empty process `RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$290'.
+Removing empty process `RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$283'.
+Found and cleaned up 1 empty switch in `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$271'.
+Removing empty process `RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$271'.
+Removing empty process `ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$266'.
+Removing empty process `DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$263'.
+Found and cleaned up 1 empty switch in `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$262'.
+Removing empty process `DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$262'.
+Removing empty process `DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$261'.
+Removing empty process `DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$260'.
+Removing empty process `DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$259'.
+Found and cleaned up 1 empty switch in `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$258'.
+Removing empty process `DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$258'.
+Removing empty process `DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$257'.
+Removing empty process `DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$256'.
+Removing empty process `DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$255'.
+Found and cleaned up 2 empty switches in `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$254'.
+Removing empty process `DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$254'.
+Removing empty process `DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$253'.
+Found and cleaned up 1 empty switch in `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$252'.
+Removing empty process `DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$252'.
+Removing empty process `DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$251'.
+Found and cleaned up 2 empty switches in `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$250'.
+Removing empty process `DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$250'.
+Removing empty process `DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$249'.
+Found and cleaned up 1 empty switch in `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$248'.
+Removing empty process `DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$248'.
+Removing empty process `DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$247'.
+Found and cleaned up 1 empty switch in `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$246'.
+Removing empty process `DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$246'.
+Removing empty process `DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$245'.
+Removing empty process `DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:366$244'.
+Removing empty process `DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$243'.
+Found and cleaned up 1 empty switch in `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$242'.
+Removing empty process `DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$242'.
+Removing empty process `DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$241'.
+Removing empty process `DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$240'.
+Removing empty process `DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$239'.
+Found and cleaned up 1 empty switch in `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$238'.
+Removing empty process `DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$238'.
+Removing empty process `DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$237'.
+Removing empty process `DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$236'.
+Removing empty process `DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$235'.
+Found and cleaned up 2 empty switches in `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$234'.
+Removing empty process `DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$234'.
+Removing empty process `DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$233'.
+Found and cleaned up 1 empty switch in `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$232'.
+Removing empty process `DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$232'.
+Removing empty process `DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$231'.
+Found and cleaned up 2 empty switches in `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$230'.
+Removing empty process `DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$230'.
+Removing empty process `DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+Found and cleaned up 1 empty switch in `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$228'.
+Removing empty process `DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$228'.
+Removing empty process `DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+Found and cleaned up 1 empty switch in `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$226'.
+Removing empty process `DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$226'.
+Removing empty process `DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+Removing empty process `DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:179$224'.
+Found and cleaned up 2 empty switches in `\LS163.$proc$../../../source/LS163.v:12$32'.
+Removing empty process `LS163.$proc$../../../source/LS163.v:12$32'.
+Found and cleaned up 3 empty switches in `\counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+Removing empty process `counter16_wrapper.$proc$../../counter16_wrapper.v:43$6'.
+Cleaned up 26 empty switches.
+
+5.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module LS163.
+<suppressed ~1 debug messages>
+Optimizing module counter16.
+Optimizing module counter16_wrapper.
+<suppressed ~1 debug messages>
+
+5.5. Executing FLATTEN pass (flatten design).
+Deleting now unused module LS163.
+Deleting now unused module counter16.
+<suppressed ~5 debug messages>
+
+5.6. Executing TRIBUF pass.
+
+5.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+5.8. Executing SYNTH pass.
+
+5.8.1. Executing PROC pass (convert processes to netlists).
+
+5.8.1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.8.1.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.8.1.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+5.8.1.4. Executing PROC_INIT pass (extract init attributes).
+
+5.8.1.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.8.1.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.8.1.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.8.1.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.8.1.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.8.1.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.8.1.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.8.1.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+<suppressed ~6 debug messages>
+
+5.8.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 25 unused cells and 113 unused wires.
+<suppressed ~26 debug messages>
+
+5.8.4. Executing CHECK pass (checking for obvious problems).
+Checking module counter16_wrapper...
+Found and reported 0 problems.
+
+5.8.5. Executing OPT pass (performing simple optimizations).
+
+5.8.5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+5.8.5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$476.
+    dead port 1/2 on $mux $procmux$479.
+    dead port 1/2 on $mux $procmux$485.
+    dead port 1/2 on $mux $procmux$491.
+    dead port 1/2 on $mux $procmux$497.
+    dead port 1/2 on $mux $procmux$503.
+    dead port 1/2 on $mux $procmux$509.
+Removed 7 multiplexer ports.
+<suppressed ~14 debug messages>
+
+5.8.5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+    Consolidated identical input bits for $mux cell $procmux$494:
+      Old ports: A=8'11111111, B=8'00000000, Y=$procmux$494_Y
+      New ports: A=1'1, B=1'0, Y=$procmux$494_Y [0]
+      New connections: $procmux$494_Y [7:1] = { $procmux$494_Y [0] $procmux$494_Y [0] $procmux$494_Y [0] $procmux$494_Y [0] $procmux$494_Y [0] $procmux$494_Y [0] $procmux$494_Y [0] }
+  Optimizing cells in module \counter16_wrapper.
+    Consolidated identical input bits for $mux cell $procmux$533:
+      Old ports: A=$2$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$30, B=8'00000000, Y=$0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14
+      New ports: A=$procmux$494_Y [0], B=1'0, Y=$0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0]
+      New connections: $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [7:1] = { $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0] $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0] $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0] $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0] $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0] $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0] $0$memwr$\stimIn$../../counter16_wrapper.v:60$5_EN[7:0]$14 [0] }
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 2 changes.
+
+5.8.5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.8.5.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.5.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+5.8.5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.8.5.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.8.5.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.8.5.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.5.16. Finished OPT passes. (There is nothing left to do.)
+
+5.8.6. Executing FSM pass (extract and optimize FSM).
+
+5.8.6.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+5.8.6.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+5.8.6.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.8.6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.8.6.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.8.6.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+5.8.6.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+5.8.6.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+5.8.7. Executing OPT pass (performing simple optimizations).
+
+5.8.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.8.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+5.8.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.8.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.8.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$625 ($dff) from module counter16_wrapper (D = { 7'0000000 \RCO }, Q = \vectOut[2]).
+Adding EN signal on $procdff$624 ($dff) from module counter16_wrapper (D = { \u_counter16.u_LS163x3.cnt \u_counter16.u_LS163x2.cnt }, Q = \vectOut[1]).
+Adding EN signal on $procdff$623 ($dff) from module counter16_wrapper (D = { \u_counter16.u_LS163x1.cnt \u_counter16.u_LS163x0.cnt }, Q = \vectOut[0]).
+Adding EN signal on $procdff$622 ($dff) from module counter16_wrapper (D = $memrd$\stimIn$../../counter16_wrapper.v:47$23_DATA [3:0], Q = \Din).
+Adding EN signal on $procdff$621 ($dff) from module counter16_wrapper (D = $memrd$\stimIn$../../counter16_wrapper.v:47$23_DATA [4], Q = \nLOAD).
+Adding EN signal on $procdff$620 ($dff) from module counter16_wrapper (D = $memrd$\stimIn$../../counter16_wrapper.v:47$23_DATA [5], Q = \nCLR).
+Adding EN signal on $procdff$619 ($dff) from module counter16_wrapper (D = $3$mem2reg_rd$\vectOut$../../counter16_wrapper.v:61$1_DATA[7:0]$31, Q = \Dout_emu).
+Adding EN signal on $flatten\u_counter16.\u_LS163x3.$procdff$618 ($adff) from module counter16_wrapper (D = $flatten\u_counter16.\u_LS163x3.$0\cnt[3:0], Q = \u_counter16.u_LS163x3.cnt).
+Adding EN signal on $flatten\u_counter16.\u_LS163x2.$procdff$618 ($adff) from module counter16_wrapper (D = $flatten\u_counter16.\u_LS163x2.$0\cnt[3:0], Q = \u_counter16.u_LS163x2.cnt).
+Adding EN signal on $flatten\u_counter16.\u_LS163x1.$procdff$618 ($adff) from module counter16_wrapper (D = $flatten\u_counter16.\u_LS163x1.$0\cnt[3:0], Q = \u_counter16.u_LS163x1.cnt).
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$640 ($dffe) from module counter16_wrapper.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$640 ($dffe) from module counter16_wrapper.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$640 ($dffe) from module counter16_wrapper.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$640 ($dffe) from module counter16_wrapper.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$640 ($dffe) from module counter16_wrapper.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$640 ($dffe) from module counter16_wrapper.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$640 ($dffe) from module counter16_wrapper.
+
+5.8.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 12 unused cells and 11 unused wires.
+<suppressed ~13 debug messages>
+
+5.8.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+5.8.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.8.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+5.8.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.7.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.7.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+5.8.7.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.8.7.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.8.7.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.7.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.8.7.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.7.23. Finished OPT passes. (There is nothing left to do.)
+
+5.8.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 address bits (of 3) from memory init port counter16_wrapper.$auto$proc_memwr.cc:45:proc_memwr$634 (stimIn).
+Removed top 32 address bits (of 32) from memory read port counter16_wrapper.$memrd$\stimIn$../../counter16_wrapper.v:47$23 (stimIn).
+Removed top 1 bits (of 2) from port B of cell counter16_wrapper.$procmux$473_CMP0 ($eq).
+Removed cell counter16_wrapper.$procmux$539 ($mux).
+Removed top 1 bits (of 2) from port B of cell counter16_wrapper.$auto$opt_dff.cc:195:make_patterns_logic$673 ($ne).
+Removed top 1 bits (of 2) from port B of cell counter16_wrapper.$auto$opt_dff.cc:195:make_patterns_logic$670 ($ne).
+Removed top 1 bits (of 2) from port B of cell counter16_wrapper.$auto$opt_dff.cc:195:make_patterns_logic$667 ($ne).
+Removed top 3 bits (of 4) from port B of cell counter16_wrapper.$flatten\u_counter16.\u_LS163x3.$add$../../../source/LS163.v:21$36 ($add).
+Removed top 3 bits (of 4) from port B of cell counter16_wrapper.$flatten\u_counter16.\u_LS163x2.$add$../../../source/LS163.v:21$36 ($add).
+Removed top 3 bits (of 4) from port B of cell counter16_wrapper.$flatten\u_counter16.\u_LS163x1.$add$../../../source/LS163.v:21$36 ($add).
+Removed top 3 bits (of 4) from port B of cell counter16_wrapper.$flatten\u_counter16.\u_LS163x0.$add$../../../source/LS163.v:21$36 ($add).
+Removed top 7 bits (of 8) from wire counter16_wrapper.vectOut[2].
+
+5.8.9. Executing PEEPOPT pass (run peephole optimizers).
+
+5.8.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 1 unused cells and 3 unused wires.
+<suppressed ~2 debug messages>
+
+5.8.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module counter16_wrapper:
+  creating $macc model for $flatten\u_counter16.\u_LS163x0.$add$../../../source/LS163.v:21$36 ($add).
+  creating $macc model for $flatten\u_counter16.\u_LS163x1.$add$../../../source/LS163.v:21$36 ($add).
+  creating $macc model for $flatten\u_counter16.\u_LS163x2.$add$../../../source/LS163.v:21$36 ($add).
+  creating $macc model for $flatten\u_counter16.\u_LS163x3.$add$../../../source/LS163.v:21$36 ($add).
+  creating $alu model for $macc $flatten\u_counter16.\u_LS163x3.$add$../../../source/LS163.v:21$36.
+  creating $alu model for $macc $flatten\u_counter16.\u_LS163x2.$add$../../../source/LS163.v:21$36.
+  creating $alu model for $macc $flatten\u_counter16.\u_LS163x1.$add$../../../source/LS163.v:21$36.
+  creating $alu model for $macc $flatten\u_counter16.\u_LS163x0.$add$../../../source/LS163.v:21$36.
+  creating $alu cell for $flatten\u_counter16.\u_LS163x0.$add$../../../source/LS163.v:21$36: $auto$alumacc.cc:485:replace_alu$676
+  creating $alu cell for $flatten\u_counter16.\u_LS163x1.$add$../../../source/LS163.v:21$36: $auto$alumacc.cc:485:replace_alu$679
+  creating $alu cell for $flatten\u_counter16.\u_LS163x2.$add$../../../source/LS163.v:21$36: $auto$alumacc.cc:485:replace_alu$682
+  creating $alu cell for $flatten\u_counter16.\u_LS163x3.$add$../../../source/LS163.v:21$36: $auto$alumacc.cc:485:replace_alu$685
+  created 4 $alu and 0 $macc cells.
+
+5.8.12. Executing SHARE pass (SAT-based resource sharing).
+
+5.8.13. Executing OPT pass (performing simple optimizations).
+
+5.8.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.8.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~7 debug messages>
+
+5.8.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.8.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.8.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.8.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.8.13.9. Finished OPT passes. (There is nothing left to do.)
+
+5.8.14. Executing MEMORY pass.
+
+5.8.14.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.8.14.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.8.14.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing counter16_wrapper.stimIn write port 0.
+
+5.8.14.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.8.14.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\stimIn'[0] in module `\counter16_wrapper': merging output FF to cell.
+    Write port 0: don't care on collision.
+
+5.8.14.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 3 unused cells and 6 unused wires.
+<suppressed ~4 debug messages>
+
+5.8.14.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+5.8.14.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.8.14.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.8.14.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.8.15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.9. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+using FF mapping for memory counter16_wrapper.stimIn
+<suppressed ~615 debug messages>
+
+5.10. Executing TECHMAP pass (map to technology primitives).
+
+5.10.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/lutrams_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/lutrams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__GOWIN_LUTRAM_'.
+Successfully finished Verilog frontend.
+
+5.10.2. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/brams_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__GOWIN_SP_'.
+Generating RTLIL representation for module `\$__GOWIN_DP_'.
+Generating RTLIL representation for module `\$__GOWIN_SDP_'.
+Successfully finished Verilog frontend.
+
+5.10.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+5.11. Executing OPT pass (performing simple optimizations).
+
+5.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+<suppressed ~6 debug messages>
+
+5.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 1 unused cells and 6 unused wires.
+<suppressed ~2 debug messages>
+
+5.11.5. Finished fast OPT passes.
+
+5.12. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \stimIn in module \counter16_wrapper:
+  created 1 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of counter16_wrapper.stimIn: $\stimIn$rdreg[0]
+  read interface: 1 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+
+5.13. Executing OPT pass (performing simple optimizations).
+
+5.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+<suppressed ~2 debug messages>
+
+5.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+5.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+5.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+5.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\stimIn[0]$896 ($dff) from module counter16_wrapper (D = \Din_emu, Q = \stimIn[0]).
+
+5.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+5.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~7 debug messages>
+
+5.13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.13.23. Finished OPT passes. (There is nothing left to do.)
+
+5.14. Executing TECHMAP pass (map to technology primitives).
+
+5.14.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.14.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$fc16b9f758000d363d24f130038bd99b46b4fa1b\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~348 debug messages>
+
+5.15. Executing OPT pass (performing simple optimizations).
+
+5.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+<suppressed ~108 debug messages>
+
+5.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+<suppressed ~33 debug messages>
+Removed a total of 11 cells.
+
+5.15.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 22 unused cells and 181 unused wires.
+<suppressed ~23 debug messages>
+
+5.15.5. Finished fast OPT passes.
+
+5.16. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Mapping port counter16_wrapper.Addr_emu using IBUF.
+Mapping port counter16_wrapper.Din_emu using IBUF.
+Mapping port counter16_wrapper.Dout_emu using OBUF.
+Mapping port counter16_wrapper.clk_dut using IBUF.
+Mapping port counter16_wrapper.clk_emu using IBUF.
+Mapping port counter16_wrapper.get_emu using IBUF.
+Mapping port counter16_wrapper.load_emu using IBUF.
+
+5.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5.18. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+5.19. Executing TECHMAP pass (map to technology primitives).
+
+5.19.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+5.19.2. Continuing TECHMAP pass.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+Using template \$_DFFE_PP0P_ for cells of type $_DFFE_PP0P_.
+Using template \$_DFF_PP0_ for cells of type $_DFF_PP0_.
+No more expansions possible.
+<suppressed ~76 debug messages>
+
+5.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+<suppressed ~6 debug messages>
+
+5.21. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+5.22. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_model.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+5.23. Executing ABC9 pass.
+
+5.23.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.3. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module counter16_wrapper.
+Found 0 SCCs.
+
+5.23.4. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.5. Executing PROC pass (convert processes to netlists).
+
+5.23.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.23.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.23.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+5.23.5.4. Executing PROC_INIT pass (extract init attributes).
+
+5.23.5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.23.5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.23.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.23.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.23.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.23.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.23.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.23.5.12. Executing OPT_EXPR pass (perform const folding).
+
+5.23.6. Executing TECHMAP pass (map to technology primitives).
+
+5.23.6.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.23.6.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~250 debug messages>
+
+5.23.7. Executing OPT pass (performing simple optimizations).
+
+5.23.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DFFCE.
+Optimizing module DFFC.
+
+5.23.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DFFCE'.
+Finding identical cells in module `\DFFC'.
+Removed a total of 0 cells.
+
+5.23.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DFFCE..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \DFFC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.23.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DFFCE.
+  Optimizing cells in module \DFFC.
+Performed a total of 0 changes.
+
+5.23.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DFFCE'.
+Finding identical cells in module `\DFFC'.
+Removed a total of 0 cells.
+
+5.23.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DFFCE..
+Finding unused cells or wires in module \DFFC..
+
+5.23.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DFFC.
+Optimizing module DFFCE.
+
+5.23.7.9. Finished OPT passes. (There is nothing left to do.)
+
+5.23.8. Executing TECHMAP pass (map to technology primitives).
+
+5.23.8.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+5.23.8.2. Continuing TECHMAP pass.
+Using template DFFCE for cells of type DFFCE.
+Using template DFFC for cells of type DFFC.
+No more expansions possible.
+<suppressed ~20 debug messages>
+
+5.23.9. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_model.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_model.v' to AST representation.
+Replacing existing blackbox module `$__ABC9_DELAY' at /usr/local/bin/../share/yosys/abc9_model.v:2.1-7.10.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Replacing existing blackbox module `$__ABC9_SCC_BREAKER' at /usr/local/bin/../share/yosys/abc9_model.v:9.1-11.10.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Replacing existing module `$__DFF_N__$abc9_flop' at /usr/local/bin/../share/yosys/abc9_model.v:14.1-20.10.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Replacing existing module `$__DFF_P__$abc9_flop' at /usr/local/bin/../share/yosys/abc9_model.v:23.1-29.10.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+5.23.10. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~76 debug messages>
+
+5.23.11. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.12. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+5.23.13. Executing TECHMAP pass (map to technology primitives).
+
+5.23.13.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.23.13.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~252 debug messages>
+
+5.23.14. Executing OPT pass (performing simple optimizations).
+
+5.23.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.23.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.23.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter16_wrapper..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.23.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter16_wrapper.
+Performed a total of 0 changes.
+
+5.23.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter16_wrapper'.
+Removed a total of 0 cells.
+
+5.23.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter16_wrapper..
+
+5.23.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter16_wrapper.
+
+5.23.14.9. Finished OPT passes. (There is nothing left to do.)
+
+5.23.15. Executing AIGMAP pass (map logic to AIG).
+
+5.23.16. Executing AIGMAP pass (map logic to AIG).
+Module counter16_wrapper: replaced 44 cells with 287 new cells, skipped 232 cells.
+  replaced 3 cell types:
+       7 $_OR_
+      12 $_XOR_
+      25 $_MUX_
+  not replaced 12 cell types:
+       5 $scopeinfo
+      27 $_NOT_
+      34 $_AND_
+      37 DFFE
+       4 DFFC
+      12 DFFCE
+      15 IBUF
+       8 OBUF
+      37 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000001001000000
+      37 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000000111111
+       4 DFFC_$abc9_byp
+      12 DFFCE_$abc9_byp
+
+5.23.16.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.16.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.16.3. Executing XAIGER backend.
+<suppressed ~64 debug messages>
+Extracted 152 AND gates and 564 wires from module `counter16_wrapper' to a netlist network with 88 inputs and 127 outputs.
+
+5.23.16.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+5.23.16.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     88/    127  and =     129  lev =    6 (0.66)  mem = 0.01 MB  box = 90  bb = 90
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 16 carries.
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     88/    127  and =     131  lev =    6 (0.65)  mem = 0.01 MB  ch =   12  box = 90  bb = 90
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 16 carries.
+ABC: + &if -W 500 -v 
+ABC: K = 8. Memory (bytes): Truth =    0. Cut =   68. Obj =  152. Set =  708. CutMin = no
+ABC: Node =     131.  Ch =    11.  Total mem =    0.09 MB. Peak cut mem =    0.01 MB.
+ABC: P:  Del = 7381.00.  Ar =     101.0.  Edge =      156.  Cut =      898.  T =     0.00 sec
+ABC: P:  Del = 7381.00.  Ar =     101.0.  Edge =      156.  Cut =      898.  T =     0.00 sec
+ABC: P:  Del = 7381.00.  Ar =      78.0.  Edge =      165.  Cut =      973.  T =     0.00 sec
+ABC: F:  Del = 7338.00.  Ar =      59.0.  Edge =      149.  Cut =      836.  T =     0.00 sec
+ABC: A:  Del = 7338.00.  Ar =      58.0.  Edge =      141.  Cut =      787.  T =     0.00 sec
+ABC: A:  Del = 7338.00.  Ar =      58.0.  Edge =      140.  Cut =      799.  T =     0.00 sec
+ABC: Total time =     0.00 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: The network is not changed by "&mfs".
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =     88/    127  and =     170  lev =    6 (0.65)  mem = 0.01 MB  box = 90  bb = 90
+ABC: Mapping (K=8)  :  lut =     36  edge =     140  lev =    2 (0.28)  levB =    4  mem = 0.00 MB
+ABC: LUT = 36 : 2=3 8.3 %  3=9 25.0 %  4=16 44.4 %  5=7 19.4 %  6=0 0.0 %  7=0 0.0 %  8=1 2.8 %  Ave = 3.89
+ABC: Warning: AIG with boxes has internal fanout in 0 complex flops and 16 carries.
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + time 
+ABC: elapse: 0.01 seconds, total: 0.01 seconds
+
+5.23.16.6. Executing AIGER frontend.
+<suppressed ~442 debug messages>
+Removed 257 unused cells and 684 unused wires.
+
+5.23.16.7. Executing ABC9_OPS pass (helper functions for ABC9).
+ABC RESULTS:              $lut cells:       37
+ABC RESULTS:   \DFFC_$abc9_byp cells:        4
+ABC RESULTS:   \DFFCE_$abc9_byp cells:       12
+ABC RESULTS:           input signals:       34
+ABC RESULTS:          output signals:      101
+Removing temp directory.
+
+5.23.17. Executing TECHMAP pass (map to technology primitives).
+
+5.23.17.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `\$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `\$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+5.23.17.2. Continuing TECHMAP pass.
+Using template DFFCE_$abc9_byp for cells of type DFFCE_$abc9_byp.
+Using template DFFC_$abc9_byp for cells of type DFFC_$abc9_byp.
+No more expansions possible.
+<suppressed ~23 debug messages>
+Removed 26 unused cells and 1097 unused wires.
+
+5.24. Executing TECHMAP pass (map to technology primitives).
+
+5.24.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+5.24.2. Continuing TECHMAP pass.
+Using template $paramod$762dcdf49521c1aa2145fa6746ab6d57dd5df22e\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01001110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$61a8060b878567b9d0f376d580a618cfae11f00f\$lut for cells of type $lut.
+Using template $paramod$8f103b552c22d16808171e82d6c69aa75169db71\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$ac9658083ea67f9230f1d4dd0b7d8f5894b2bd45\$lut for cells of type $lut.
+Using template $paramod$decd7d44aed8170c3826b15dbafe01496fe539f9\$lut for cells of type $lut.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11010101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod$251994398653c4cf8de320f1e306e535d5d2d624\$lut for cells of type $lut.
+Using template $paramod$6c30e96f9a581ef20d66e60c8c4849cf1b34156f\$lut for cells of type $lut.
+Using template $paramod$109be716830a6f862b58ecad7bca96960460ecfc\$lut for cells of type $lut.
+Using template $paramod$e15a0db9d6911f8bae5a75e6e67e8407bc6a67bd\$lut for cells of type $lut.
+Using template $paramod$a6b06dd99a0731948638dfc05621d532d7a431dd\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1101 for cells of type $lut.
+Using template $paramod$7690d29a43b3ff40d17e028e4aaa6d640f71b929\$lut for cells of type $lut.
+Using template $paramod$a2b4ddfa3906001b2ef9f2414d79c3048f2a3a6e\$lut for cells of type $lut.
+Using template $paramod$777f3496d963e912f64377c56ca729ef453877ed\$lut for cells of type $lut.
+Using template $paramod$9664483609d9e726df9697364de1aad825ad3979\$lut for cells of type $lut.
+Using template $paramod$f41a7d498c84d8354c6c5442082d8774ac41bb11\$lut for cells of type $lut.
+Using template $paramod$2d6ba752084ecb1c9d2b201c8dca948fd708c507\$lut for cells of type $lut.
+Using template $paramod$2acc56796dae1e7bbd8d34441a24f749523f3d30\$lut for cells of type $lut.
+Using template $paramod$0f71ea37248b72e66d575a448ad832b3423dec7d\$lut for cells of type $lut.
+Using template $paramod$c105c3ef2f9a8105b3df66cbb6aad4c6c690aa8f\$lut for cells of type $lut.
+Using template $paramod$9eac743f11310cf03efe842fba73952be4605703\$lut for cells of type $lut.
+Using template $paramod$fced1e4a68a3ccd8a77f0172a7a27e31013c73a7\$lut for cells of type $lut.
+Using template $paramod$692927e279b3d5c42ee4aacb287247c0b34943ed\$lut for cells of type $lut.
+Using template $paramod$bf0d0292861bdee659ef5cbc5e58b330ac5871f9\$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~507 debug messages>
+
+5.25. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in counter16_wrapper.
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $auto$abc9_ops.cc:1550:reintegrate$2349.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $auto$abc9_ops.cc:1550:reintegrate$2348.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$2342$lut$aiger2341$233.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2342$lut$aiger2341$244.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $auto$abc9_ops.cc:1550:reintegrate$2359.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+
+5.26. Executing SETUNDEF pass (replace undef values with defined constants).
+
+5.27. Executing HILOMAP pass (mapping to constant drivers).
+
+5.28. Executing SPLITNETS pass (splitting up multi-bit signals).
+Removed 1 unused cells and 435 unused wires.
+
+5.29. Executing AUTONAME pass.
+Renamed 1235 objects in module counter16_wrapper (21 iterations).
+<suppressed ~277 debug messages>
+
+5.30. Executing HIERARCHY pass (managing design hierarchy).
+
+5.30.1. Analyzing design hierarchy..
+Top module:  \counter16_wrapper
+
+5.30.2. Analyzing design hierarchy..
+Top module:  \counter16_wrapper
+Removed 0 unused modules.
+
+5.31. Printing statistics.
+
+=== counter16_wrapper ===
+
+   Number of wires:                208
+   Number of wire bits:            208
+   Number of public wires:         208
+   Number of public wire bits:     208
+   Number of ports:                 23
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                163
+     $scopeinfo                      5
+     DFFC                            4
+     DFFCE                          12
+     DFFE                           37
+     GND                             1
+     IBUF                           15
+     LUT1                           18
+     LUT2                            3
+     LUT3                           11
+     LUT4                           27
+     MUX2_LUT5                      15
+     MUX2_LUT6                       4
+     MUX2_LUT7                       2
+     MUX2_LUT8                       1
+     OBUF                            8
+
+5.32. Executing CHECK pass (checking for obvious problems).
+Checking module counter16_wrapper...
+Found and reported 0 problems.
+
+5.33. Executing Verilog backend.
+
+5.33.1. Executing BMUXMAP pass.
+
+5.33.2. Executing DEMUXMAP pass.
+Dumping module `\counter16_wrapper'.
+
+6. Printing statistics.
+
+=== counter16_wrapper ===
+
+   Number of wires:                208
+   Number of wire bits:            208
+   Number of public wires:         208
+   Number of public wire bits:     208
+   Number of ports:                 23
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                163
+     $scopeinfo                      5
+     DFFC                            4
+     DFFCE                          12
+     DFFE                           37
+     GND                             1
+     IBUF                           15
+     LUT1                           18
+     LUT2                            3
+     LUT3                           11
+     LUT4                           27
+     MUX2_LUT5                      15
+     MUX2_LUT6                       4
+     MUX2_LUT7                       2
+     MUX2_LUT8                       1
+     OBUF                            8
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 059de3d3f2, CPU: user 0.54s system 0.00s, MEM: 36.19 MB peak
+Yosys 0.41+111 (git sha1 4b67f3757, clang++ 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 19% 23x read_verilog (0 sec), 10% 8x techmap (0 sec), ...

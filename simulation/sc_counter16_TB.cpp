@@ -6,6 +6,9 @@ Revision History: Jun. 1, 2024
 *******************************************************************************/
 #include "sc_counter16_TB.h"
 
+#include <iostream>
+#include <iomanip>
+
 void sc_counter16_TB::test_generator()
 {
     nLOAD.write(1);
@@ -26,12 +29,26 @@ void sc_counter16_TB::test_generator()
 
     for (int nTest = 0; nTest <66000; nTest++)
     {
-        wait(CLK.negedge_event());  // avoid setup violation when timing sim.
+        wait(CLK.posedge_event());
     }
-    //while(true)
-    //{
-    //    wait(CLK.negedge_event());  // avoid setup violation when timing sim.
-    //}
     
     sc_stop();
+}
+
+void sc_counter16_TB::monitor()
+{
+    sc_time t(1, SC_NS);
+#ifdef CO_EMULATION
+    while(true)
+    {
+        wait(CLK.posedge_event());
+        if ((int)Dout_emu.read() != (int)Dout_n32.read())
+        {
+            cout    << "Error at "   << sc_time_stamp() << ": "
+                    << std::hex
+                    << "Dout=0x"     << Dout_n16.read() << " "
+                    << "Dout_emu=0x" << Dout_emu.read() << endl;
+        }
+    }
+#endif
 }

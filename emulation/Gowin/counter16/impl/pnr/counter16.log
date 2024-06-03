@@ -1,0 +1,26 @@
+Reading netlist file: "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/emulation/Gowin/counter16/impl/gwsynthesis/counter16.vg"
+Parsing netlist file "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/emulation/Gowin/counter16/impl/gwsynthesis/counter16.vg" completed
+Processing netlist completed
+Reading constraint file: "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/emulation/Gowin/counter16/src/counter16.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/emulation/Gowin/counter16/impl/pnr/counter16.pin.html" completed
+Generate file "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/emulation/Gowin/counter16/impl/pnr/counter16.rpt.html" completed
+Generate file "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/emulation/Gowin/counter16/impl/pnr/counter16.rpt.txt" completed
+Generate file "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/Counter8/emulation/Gowin/counter16/impl/pnr/counter16.tr.html" completed
+Mon Jun  3 07:27:05 2024
+

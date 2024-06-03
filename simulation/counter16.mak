@@ -38,7 +38,7 @@ build : $(TARGET_DIR)/$(TARGET)
 
 $(TARGET_DIR)/$(TARGET) : $(VERILOG_SRCS) $(SC_SRCS) $(SC_TOP_H)
 	$(VERILATOR) --sc -Wall --top-module $(TOP_MODULE) --exe --build \
-		-CFLAGS $(CFLAGS) \
+		-CFLAGS $(CFLAGS) -DENT_ENP_CONTROL \
 		$(VERILOG_SRCS) $(SC_SRCS)
 
 lint : $(VERILOG_SRCS)

@@ -44,7 +44,8 @@ SC_MODULE(sc_counter16_TB)
     }
 
     void test_generator();
-
+    void monitor();
+    
     sc_trace_file* fp;  // VCD file
 
     SC_CTOR(sc_counter16_TB) :   // Constructor
@@ -66,16 +67,17 @@ SC_MODULE(sc_counter16_TB)
         u_counter16 = new counter16("u_counter16");
         // Binding
         u_counter16->CLK(CLK);
-        u_counter16->nCLR_L(nCLR);
-        u_counter16->nLOAD_L(nLOAD);
-        u_counter16->ENP(ENP);
-        u_counter16->ENT(ENT);
+        u_counter16->nCLR(nCLR);
+        u_counter16->nLOAD(nLOAD);
         u_counter16->Din(Din_n4);
         u_counter16->Dout(Dout_emu);
         u_counter16->RCO(RCO_emu);
 #endif
 
         SC_THREAD(test_generator);
+        sensitive << CLK;
+
+        SC_THREAD(monitor);
         sensitive << CLK;
 
         SC_METHOD(conv_method);
